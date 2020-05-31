@@ -1,13 +1,3 @@
-<!--
- * @Author: AimerNeige
- * @GitHub: https://www.github.com/AimerNeige
- * @Telegram: https://t.me/AimerNeige
- * @Blog: https://aimerneige.com
- * @Email: aimer.neige.soft@gmail.com
- * @Date: 2020-06-01 00:56:06
- * @FilePath: \nonebot\README.md
- * @Description: 
---> 
 # Farewell's nonebot
 本人开发的一个无聊的整活机器人
 包含以下功能：
