@@ -48,7 +48,7 @@ def read():
                 temp_wife.height = t['height']
                 temp_wife.widget = t['widget']
                 temp_wife.name = t['name']
-                temp_wife.ouPai = t['ouPai']
+                temp_wife.ouPai = t['ouPai'] # おっばい
                 temp_wife.liking = t['liking']
                 temp_wife.sex = t['sex']
                 temp_wife.age = t['age']
