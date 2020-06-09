@@ -51,38 +51,45 @@ class user_list:
 class wife:
     def __init__(self, user):
         f = random.randint(0, len(work) - 1)
-        g = random.randint(0, len(race) - 1)
-        a = random.randint(0, len(surname) - 1)
-        b = random.randint(0, len(name) - 1)
         self.work = work[f]
+
+        g = random.randint(0, len(race) - 1)
         self.race = race[g]
 
-        c = random.randint(0, len(ouPai_size) - 1)
-        d = random.randint(16, 24)
-        e = random.randint(0, len(sex) - 1)
+        a = random.randint(0, len(surname) - 1)
+        b = random.randint(0, len(name) - 1)
+        self.name = surname[a] + name[b]
 
+        c = random.randint(0, len(ouPai_size) - 1)
+        self.ouPai = ouPai_size[c]
+
+        d = random.randint(16, 24)
         if self.work == '小学生':
             d -= 8
-        h = random.randint(145, 170)
+        self.age = d
 
+        e = random.randint(0, len(sex) - 1)
+        self.sex = sex[e]
+
+        h = random.randint(145, 170)
         if d >= 16 and h < 150 and not self.race=='矮人' :
             h += 10
         if self.race == '矮人':
             h -= 30
-        i = random.randint(85, 110)
-        j = random.randint(0, len(mengDian) - 1)
-        self.name = surname[a] + name[b]
-        self.ouPai = ouPai_size[c]
-        self.husband = user
-        self.age = d
         self.height = str(h)
+
+        i = random.randint(85, 110)
         self.widget = str(i)
-        self.sex = sex[e]
+
+        j = random.randint(0, len(mengDian) - 1)
         self.meng = mengDian[j]
+
+        self.husband = user
         self.liking = random.randint(0, 30)
         self.isMerry = False
         self.isTalk = False
         self.scence=get_love_scence()
+
     def get_merry(self):
         if self.liking >= 50 and self.isMerry == False:
             self.isMerry = True
