@@ -50,39 +50,32 @@ class user_list:
 
 class wife:
     def __init__(self, user):
-        f = random.randint(0, len(work) - 1)
-        self.work = work[f]
+        self.work = work[random.randint(0, len(work) - 1)]
+        self.race = race[random.randint(0, len(race) - 1)]
+        self.name = surname[random.randint(0, len(surname) - 1)] + name[random.randint(0, len(name) - 1)]
+        self.ouPai = ouPai_size[random.randint(0, len(ouPai_size) - 1)]
 
-        g = random.randint(0, len(race) - 1)
-        self.race = race[g]
-
-        a = random.randint(0, len(surname) - 1)
-        b = random.randint(0, len(name) - 1)
-        self.name = surname[a] + name[b]
-
-        c = random.randint(0, len(ouPai_size) - 1)
-        self.ouPai = ouPai_size[c]
-
-        d = random.randint(16, 24)
         if self.work == '小学生':
-            d -= 8
-        self.age = d
+            a = random.randint(7, 12)
+        elif self.work == '教师':
+            a = random.randint(20, 24)
+        else:
+            a = random.randint(16, 24)
+        self.age = a
 
-        e = random.randint(0, len(sex) - 1)
-        self.sex = sex[e]
+        self.sex = sex[random.randint(0, len(sex) - 1)]
 
-        h = random.randint(145, 170)
-        if d >= 16 and h < 150 and not self.race=='矮人' :
-            h += 10
         if self.race == '矮人':
-            h -= 30
+            h = random.randint(115, 140)
+        elif self.race == '小学生':
+            h = random.randint(125, 150)
+        else:
+            h = random.randint(145, 170)
         self.height = str(h)
 
-        i = random.randint(85, 110)
-        self.widget = str(i)
+        self.widget = str(random.randint(85, 110))
 
-        j = random.randint(0, len(mengDian) - 1)
-        self.meng = mengDian[j]
+        self.meng = mengDian[random.randint(0, len(mengDian) - 1)]
 
         self.husband = user
         self.liking = random.randint(0, 30)
